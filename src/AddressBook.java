@@ -5,7 +5,7 @@ public class AddressBook {
     private ArrayList<BuddyInfo> buddyList;
 
     public AddressBook() {
-        buddyList = new ArrayList<BuddyInfo>();
+        buddyList = new ArrayList<>();
     }
 
     public static void main(String[] args) {
@@ -17,19 +17,15 @@ public class AddressBook {
         System.out.println("Address Book");
     }
 
-    public boolean removeBuddy(int index) {
+    public void removeBuddy(int index) {
         if (index >= 0 && index < buddyList.size()) {
             buddyList.remove(index);
-            return true;
         }
-        return false;
     }
 
-    public boolean addBuddy(BuddyInfo buddy) {
+    public void addBuddy(BuddyInfo buddy) {
         if (buddy != null) {
             buddyList.add(buddy);
-            return true;
         }
-        return false;
     }
 }
