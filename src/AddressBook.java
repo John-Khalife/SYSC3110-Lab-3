@@ -12,7 +12,9 @@ public class AddressBook {
         //Objects that will be necessary
         BuddyInfo buddy = new BuddyInfo();
         AddressBook addressBook = new AddressBook();
+        System.out.println("Adding a buddy. Size: " + addressBook.getSize());
         addressBook.addBuddy(buddy);
+        System.out.println("Removing a buddy. Size: " + addressBook.getSize());
         addressBook.removeBuddy(0);
         System.out.println("Address Book");
     }
@@ -27,5 +29,9 @@ public class AddressBook {
         if (buddy != null) {
             buddyList.add(buddy);
         }
+    }
+
+    public int getSize() {
+        return buddyList.size();
     }
 }
